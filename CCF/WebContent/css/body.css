@@ -1,0 +1,109 @@
+body{
+    background: oldlace;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 400px;
+    margin-bottom: 200px;
+    clear: both;
+}
+
+p{
+    text-align: center;
+}
+
+.video-playlist-table table, th, td{
+    border: 1px solid black;
+}
+
+.main-body img{
+    max-width: 90%;
+    height: auto;
+    width: auto;
+    opacity: 1;
+}
+
+.ranks{
+     color: black;
+     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+     text-align: center;
+}
+
+.ranks h1{
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-align: center;
+}
+
+.ranks table{
+    border: 5px hidden white;
+    text-align: left;
+}
+
+.ranks th, td{
+    border: 1px hidden black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tournamentButton{
+    text-align: center;
+}
+
+button.accordian {
+    background-color: darkgray;
+    cursor: pointer;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    border-width: 1px;
+    border: solid;
+    border-bottom: none;
+    border-color: oldlace;
+    transition: 0.4s;
+}
+
+button.accordian.active, button.accordian.hover {
+    background-color: gray;
+}
+
+div.panel {
+    position: relative;
+    left: 11%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 78%;
+    text-align: center;
+    background-color: lightgray;
+    display: none;
+
+}
+
+.loginForm {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-align: left;
+    margin-left: 30%;
+}
+
+.submitButton {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-align: left;
+    margin-left: 180px;
+}
+
+.AdminLoginTitle h1{
+    text-align: center;
+}
+
+div.sign-up{
+    margin-left: 5%;
+}
+
+div.playerSignUp{
+    margin-left: 5%;
+}
+
+div.failure{
+    size: 18px;
+    color: darkred;
+    font-weight: bold;
+}
