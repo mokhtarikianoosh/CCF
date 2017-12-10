@@ -7,20 +7,12 @@ $(document).ready(function() {
 		type: 'GET',
 		dataType: "json",
 		success: function(Player){
-			
-			
-			
-			
-			
-			
-			
-		var html = "";
-		
-		
+			var html = "";
 			$.each(Player.player, function(index, p){
-				
-				console.log(p.id);
-				console.log(p.rankValue);
+			
+			
+	
+
 				
 				 html +=  '<tr>' +
 	                '<td>' + p.rankValue + '</td>    '   +              

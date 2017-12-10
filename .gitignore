@@ -16,6 +16,7 @@ CCF/.settings/org.eclipse.wst.jsdt.ui.superType.container
 CCF/.settings/org.eclipse.wst.jsdt.ui.superType.name
 
 CCF/WebContent/javascript/login.js
+<<<<<<< Updated upstream
 CCF/.classpath
 CCF/.classpath
 CCF/.classpath
@@ -25,3 +26,7 @@ CCF/.classpath
 CCF/.classpath
 *.class
 CCF/build/classes/logicLayer/logicLayer.class
+=======
+
+CCF/WebContent/javascript/rankings.js
+>>>>>>> Stashed changes
