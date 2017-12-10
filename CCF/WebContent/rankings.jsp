@@ -34,18 +34,7 @@
                         <th>Rank</th>
                         <th>Tag</th>
                     </tr>
-                    <tr>
-                        <td>1.</td>                    
-                        <td>RobinHood</td>
-                    </tr>
-                    <tr>
-                        <td>2.</td>
-                        <td>DCW</td>
-                    </tr>
-                    <tr>
-                        <td>3.</td>
-                        <td>Bottle</td>
-                    </tr>    
+                   
                 </tbody>
             </table>
         </div>
