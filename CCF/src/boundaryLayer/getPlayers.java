@@ -29,8 +29,11 @@ import persistLayer.DatabaseAccess;
 public class getPlayers extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private logicLayer logic = new logicLayer();
+	public Player p1 = new Player(1, -1.00 , "bob");
+	public Player p2 = new Player(2, -1,  "alice");
+	public Player p3 = new Player(3, -1, "mat");
 
-	Connection c = DatabaseAccess.connect();
+	//Connection c = DatabaseAccess.connect();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -48,6 +51,10 @@ public class getPlayers extends HttpServlet {
 		
 		List<Player> playerlist =  new ArrayList<Player>();
 		
+		//playerlist.add(p1);
+		//playerlist.add(p2);
+		//playerlist.add(p3);
+		
 		playerlist = logic.getAllPlayers();
 		
 		Collections.sort(playerlist, new Comparator<Player>(){
@@ -56,6 +63,7 @@ public class getPlayers extends HttpServlet {
 				  return Double.compare(p1.getRankValue(), p2.getRankValue());
 			}
 		});
+		
 		
 		pmap.put("player", playerlist);
 		

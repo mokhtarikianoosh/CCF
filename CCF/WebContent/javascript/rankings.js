@@ -8,28 +8,48 @@ $(document).ready(function() {
 		dataType: "json",
 		success: function(Player){
 			
-			var playerlist = JSON.parse(Player);
 			
-			$.each(playerlist, function(index){
+			
+			
+			
+			
+			
+		var html = "";
+		
+		
+			$.each(Player.player, function(index, p){
 				
-				 var html = '  <tr>' +
-	                '<td>' + playerlist[index].getRankValue() + '</td>    '   +              
-	                '<td>' + playerlist[index].getPlayerTag() + '</td>' + 
-	            '</tr>';
-	            $("#playerContainer").append(html);
+				console.log(p.id);
 				console.log(p.rankValue);
 				
-			});
+				 html +=  '<tr>' +
+	                '<td>' + p.rankValue + '</td>    '   +              
+	                '<td>' + p.playerTag + '</td>' + 
+	               
+	           '</tr>';
+				 
+				 console.log(html);
+				
+				});
+		
 			
-			
-			
-			
+	          $("#playerContainer").append(html);
+				//console.log(p.rankValue);
+				
 		}
+			
+			
+			
+			
+		
 		
 		
 	});
 	
+	
 });
+
+
 
 		
 		

@@ -13,7 +13,7 @@ public class logicLayer {
 	
 	public List<Player> getAllPlayers(){
 		List<Player> result = null;
-		PlayerPersists x = new PlayerPersists();
+	PlayerPersists x = new PlayerPersists();
 		result = x.getAllPlayers();
 		return result;
 	}
