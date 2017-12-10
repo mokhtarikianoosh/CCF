@@ -15,7 +15,7 @@
     <body>
         <div class = "menu">
             <ul>
-                <li class = "home"><a href = "home.html">Home</a></li>
+                <li class = "home"><a href = "index.jsp">Home</a></li>
                 <li class = "rankings"><a href = "rankings.html">Rankings</a></li>
                 <li class = "tournaments"><a href = "tournaments.html">Tournaments</a></li>
                 <li class = "sign-up"><a href = "signup.jsp">Sign-up</a></li>
