@@ -8,16 +8,20 @@ $(document).ready(function() {
 		dataType: "json",
 		success: function(Player){
 			
-			$.each(Player, function(index){
+			var playerlist = JSON.parse(Player);
+			
+			$.each(playerlist, function(index){
 				
 				 var html = '  <tr>' +
-	                '<td>' + Player.rankValue + '</td>    '   +              
-	                '<td>' + Player.playerTag + '</td>' + 
+	                '<td>' + playerlist[index].getRankValue() + '</td>    '   +              
+	                '<td>' + playerlist[index].getPlayerTag() + '</td>' + 
 	            '</tr>';
 	            $("#playerContainer").append(html);
-				
+				console.log(p.rankValue);
 				
 			});
+			
+			
 			
 			
 		}
