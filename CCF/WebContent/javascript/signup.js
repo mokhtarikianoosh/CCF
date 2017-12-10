@@ -13,7 +13,7 @@ $(document).ready(function(){
 			data: $("#updateUserName").serialize(),
 			success: function(data){
 					
-				$("#displayName").html(data.username + "has successfully signed up");
+				$("#displayName").html(data.username + " has successfully signed up");
 			}
 			
 			

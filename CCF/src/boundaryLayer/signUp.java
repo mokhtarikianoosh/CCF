@@ -2,6 +2,7 @@ package boundaryLayer;
 
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,12 +14,17 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
+import logicLayer.logicLayer;
+import persistLayer.DatabaseAccess;
+
 /**
  * Servlet implementation class signUp
  */
 @WebServlet("/signup")
 public class signUp extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private logicLayer logic = new logicLayer();
+	Connection c = DatabaseAccess.connect();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -43,11 +49,12 @@ public class signUp extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
-Map <String, Object>  map =  new HashMap <String, Object>();
+		Map <String, Object>  map =  new HashMap <String, Object>();
 		
 		String username = request.getParameter("username");
 		//String username = "LOL";
 
+		logic.createPlayer(username);
 		
 		map.put("username", username);
 		

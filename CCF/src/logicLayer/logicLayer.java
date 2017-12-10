@@ -17,4 +17,10 @@ public class logicLayer {
 		result = x.getAllPlayers();
 		return result;
 	}
+	
+	public void createPlayer(String username){
+		Player p = new Player(0, -1, username);
+		PlayerPersists pp = new PlayerPersists();
+		pp.insertPlayer(p);
+	}
 }
