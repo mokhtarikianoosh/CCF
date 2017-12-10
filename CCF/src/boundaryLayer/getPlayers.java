@@ -3,7 +3,11 @@ package boundaryLayer;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -15,15 +19,17 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 
 import logicLayer.logicLayer;
+import objectLayer.Player;
 import persistLayer.DatabaseAccess;
 
 /**
  * Servlet implementation class signUp
  */
-@WebServlet("/signup")
+@WebServlet("/getplayers")
 public class getPlayers extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private logicLayer logic = new logicLayer();
+
 	Connection c = DatabaseAccess.connect();
        
     /**
@@ -38,8 +44,23 @@ public class getPlayers extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Map <String, Object> pmap = new HashMap<String, Object>();
 		
+		List<Player> playerlist =  new ArrayList<Player>();
 		
+		playerlist = logic.getAllPlayers();
+		
+		Collections.sort(playerlist, new Comparator<Player>(){
+			@Override
+			public int compare(Player p1, Player p2) {
+				  return Double.compare(p1.getRankValue(), p2.getRankValue());
+			}
+		});
+		
+		pmap.put("player", playerlist);
+		
+		write(response, pmap);
+ 		
 		}
 
 	/**
@@ -48,17 +69,9 @@ public class getPlayers extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+	
 		
-		Map <String, Object>  map =  new HashMap <String, Object>();
 		
-		String username = request.getParameter("username");
-		//String username = "LOL";
-
-		logic.createPlayer(username);
-		
-		map.put("username", username);
-		
-		write(response, map);
 	}
 
 	private void write(HttpServletResponse response, Map<String, Object> map) throws IOException {
