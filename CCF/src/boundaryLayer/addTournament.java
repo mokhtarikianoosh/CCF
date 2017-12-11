@@ -3,6 +3,7 @@ package boundaryLayer;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,13 +52,28 @@ public class addTournament extends HttpServlet {
 		
 		Map <String, Object>  map =  new HashMap <String, Object>();
 		
-		String username = request.getParameter("PlayerTag");
+		String name = request.getParameter("name");
+		String date = request.getParameter("date");
+		String type = request.getParameter("versusNumber");
+		String entryFee = request.getParameter("entryFee");
+		String fPrize = request.getParameter("firstPlace");
+		String sPrize = request.getParameter("secondPlace");
+		String tPrize = request.getParameter("thirdPlace");
+		
+		//int lol = Integer.parseInt(fPrize);
+		
+		
+		int id = -1;
+		
+		logic.addTournament(id, name, date, type, entryFee, fPrize, sPrize, tPrize);
+		
+		
 	   // Int rank = request.getParameter("");
 	
-
-		logic.createPlayer(username);
 		
-		map.put("username", username);
+		
+		
+		
 		
 		write(response, map);
 	}

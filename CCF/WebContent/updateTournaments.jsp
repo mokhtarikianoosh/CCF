@@ -48,7 +48,7 @@
             
             
             
-<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+
 <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
 
 <!-- Inline CSS based on choices in "Settings" tab -->
@@ -89,6 +89,9 @@
        <option value="2v2">
         2v2
        </option>
+       <option value ="free">
+       Free for All
+       </option>
       </select>
      </div>
      <div class="form-group ">
@@ -98,31 +101,31 @@
       <input class="form-control" id="entryFee" name="entryFee" placeholder="$" type="text"/>
      </div>
      <div class="form-group ">
-      <label class="control-label requiredField" for="name2">
+      <label class="control-label requiredField" for="firstPlace">
        First Place Prize
        <span class="asteriskField">
         *
        </span>
       </label>
-      <input class="form-control" id="firstPlace" name="" placeholder="$" type="text"/>
+      <input class="form-control" id="firstPlace" name="firstPlace" placeholder="$" type="text"/>
      </div>
      <div class="form-group ">
-      <label class="control-label requiredField" for="name3">
+      <label class="control-label requiredField" for="secondPlace">
        Second Place Prize
        <span class="asteriskField">
         *
        </span>
       </label>
-      <input class="form-control" id="secondPlace" name="name3" type="text"/>
+      <input class="form-control" id="secondPlace" name="secondPlace" type="text"/>
      </div>
      <div class="form-group ">
-      <label class="control-label requiredField" for="name4">
+      <label class="control-label requiredField" for="thirdPlace">
        3rd Place Prize
        <span class="asteriskField">
         *
        </span>
       </label>
-      <input class="form-control" id="thirdPlace" name="name4" placeholder="$" type="text"/>
+      <input class="form-control" id="thirdPlace" name="thirdPlace" placeholder="$" type="text"/>
      </div>
      <div class="form-group">
       <div>

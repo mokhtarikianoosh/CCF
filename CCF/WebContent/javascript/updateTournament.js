@@ -13,7 +13,7 @@ $(document).ready(function(){
             url:"addTournament",
             type:"POST",
             dataType: "json",
-            data: $("#addTournament").serialize(),
+            data: $("#createT").serialize(),
             success: function(data){
             	
             	if(!data.isValid){

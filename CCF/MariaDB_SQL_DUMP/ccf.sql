@@ -31,6 +31,22 @@ CREATE TABLE `player` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+DROP TABLE IF EXISTS `Tournament`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Tournament` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+   `date` varchar(255) NOT NULL,
+   `entryFee` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `fPrize` varchar(255) NOT NULL,
+  `sPrize` varchar(255) NOT NULL,
+  `tPrize` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
 --
 -- Dumping data for table `player`
 --

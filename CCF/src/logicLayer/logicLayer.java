@@ -68,16 +68,20 @@ public class logicLayer {
 		pp.addPoints(id, points);
 		
 		}
-		
-		
-		
 	}
+		
+		
+		
+
 	
-	public void addTournament(int id ,String name,Date  .sq, String tyoe, int entryFee,  String firstPrize, String secondPrize , String thirdPrize){
+	public void addTournament(int id ,String name, String date, String type, String entryFee,  String firstPrize, String secondPrize , String thirdPrize){
 		
-		Tournament T = new Tournament (id, name , date ,tyoe, entryFee, firstPrize, secondPrize, thirdPrize);
+		Tournament T = new Tournament (id, name , date ,type, entryFee, firstPrize, secondPrize, thirdPrize);
 		
+		TournamentPersists TP = new TournamentPersists();
+		TP.insertTournament(T);
 		
+	
 		
 		
 	}

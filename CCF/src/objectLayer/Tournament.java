@@ -6,19 +6,19 @@ public class Tournament {
 	private int id = 0;
 	private String EmbedCode;
 	private String name;
-	private Date date;
-	private int entryFee;
+	private String date;
+	private String entryFee;
 	private String firstPrize;
 	private String secondPrize;
 	private String thirdPrize;
 	private String type;
 	
 	
-	public Tournament(int id,  String name, Date date, String type , int enteryFee, String firstPrize, String secondPrize, String thirdPrize ) {
+	public Tournament(int id,  String name, String date, String type ,  String firstPrize, String secondPrize, String thirdPrize, String entryFee ) {
 		this.id = id;
 		
 		this.date = date;
-		this.name = name;
+		this.setName(name);
 		this.entryFee = entryFee;
 		this.firstPrize = firstPrize;
 		this.secondPrize = secondPrize;
@@ -33,10 +33,10 @@ public class Tournament {
 		this.id = id;
 	}
 	
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
@@ -48,7 +48,7 @@ public class Tournament {
 		EmbedCode = embedCode;
 	}
 	
-	public void setEntryFee(int e){
+	public void setEntryFee(String e){
 		entryFee = e;
 		
 	}
@@ -65,22 +65,22 @@ public class Tournament {
 		
 	}
 	
-	public int getEntrefee(String e){
+	public String getEntrefee(){
 	
 		return entryFee;
 	}
 	
-	public String getFirstPrizee(String e){
+	public String getFirstPrizee(){
 		
 		return firstPrize;
 	}
 	
-	public String getSecondPrize(String e){
+	public String getSecondPrize(){
 		
 		return secondPrize;
 	}
 
-	public String getThirdPrize(String e){
+	public String getThirdPrize(){
 	
 	return thirdPrize;
 }
@@ -92,6 +92,14 @@ public class Tournament {
 	
 	public void setType(String g){
 		this.type = g;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	
