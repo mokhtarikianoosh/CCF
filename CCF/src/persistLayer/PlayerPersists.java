@@ -107,14 +107,14 @@ public class PlayerPersists {
 	 * @param playerTag the PlayerTag of the Player we wish to get the id of
 	 * @return the Player's Id, or -1 if no PlayerTag matches
 	 */
-	public int getPlayerId(String playerTag) {
-		String query = "SELECT id FROM Player WHERE PlayerTag = " + playerTag + ";";
+	public String getPlayerId(String playerTag) {
+		String query = "SELECT id FROM Player WHERE PlayerTag = '" + playerTag + "';"; 
 		ResultSet result = DatabaseAccess.retrieve(query);
 		
-		int id = -1;
+		String id = "";
 		try {
 			while (result.next()) {
-				id = result.getInt("id");
+				id = Integer.toString(result.getInt("id"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -160,12 +160,12 @@ public class PlayerPersists {
 	 * @return the PlayerTag of the Player
 	 */
 	public String getPlayerTag(int userId) {
-		String query = "SELECT PlayerTag FROM Player WHERE id = " + userId + ";";
+		String query = "SELECT PlayerTag FROM Player WHERE id = '" + userId + "';";
 		ResultSet result = DatabaseAccess.retrieve(query);
 		String PlayerTag = null;
 		try {
 			while (result.next()) {
-				PlayerTag = result.getString("username");
+				PlayerTag = result.getString("PlayerTag");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -173,6 +173,68 @@ public class PlayerPersists {
 		
 		DatabaseAccess.disconnect();
 		return PlayerTag;
+	}
+	
+	
+	
+	
+	public boolean validateName(String playerTag) {
+		String query = "SELECT * FROM Player WHERE PlayerTag = '" + playerTag + "';";
+		String retrievedN = "";
+		ResultSet result = null;
+		result = DatabaseAccess.retrieve(query);
+		
+		try {
+			while (result.next()) {
+				retrievedN = result.getString("PlayerTag");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		if(retrievedN.equals("")){
+			
+			return false;
+		
+		}
+		else
+			return true;
+		
+		
+		
+	}
+	
+	
+	
+	
+	public void addPoints(String id , int p){
+		
+		int points = 0;
+		int currentPoints = 0;
+		
+		String query = "SELECT Points From Player WHERE  id = " + id + ";";
+		
+		ResultSet result = DatabaseAccess.retrieve(query);
+		
+		try {
+			while (result.next()) {
+				currentPoints = result.getInt("Points");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		points += currentPoints + p;
+		
+		
+		 String addP = "UPDATE Player SET Points =" + points + " WHERE id = " + id  + ";";
+		 
+		 DatabaseAccess.update(addP);
+		 DatabaseAccess.disconnect();
+		 
+		
+		
 	}
 		
 	

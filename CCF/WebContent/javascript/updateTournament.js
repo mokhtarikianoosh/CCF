@@ -10,6 +10,10 @@ $(document).ready(function(){
             dataType: "json",
             data: $("#addTournament").serialize(),
             success: function(data){
+            	
+            	if(!data.isValid){
+            		alert("Invalid User Tag entered");
+            	}
 
             }
         });

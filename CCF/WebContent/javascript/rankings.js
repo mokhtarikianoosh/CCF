@@ -9,18 +9,12 @@ $(document).ready(function() {
 		success: function(Player){
 			
 			
-			
-			
-			
-			
-			
-		var html = "";
+			var html = "";
 		
 		
 			$.each(Player.player, function(index, p){
 				
-				console.log(p.id);
-				console.log(p.rankValue);
+				if(p.rankValue != -1){
 				
 				 html +=  '<tr>' +
 	                '<td>' + p.rankValue + '</td>    '   +              
@@ -30,7 +24,8 @@ $(document).ready(function() {
 				 
 				 console.log(html);
 				
-				});
+				}
+			});
 		
 			
 	          $("#playerContainer").append(html);

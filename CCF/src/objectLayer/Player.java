@@ -5,11 +5,13 @@ public class Player {
 	private int id = 0;
 	private double rankValue;
 	private String playerTag;
+	private int points = 0;
 	
 	public Player(int id, double rankValue, String playerTag) {
 		this.id = id;
 		this.rankValue = rankValue;
 		this.playerTag = playerTag;
+		this.points = 0;
 	}
 	
 	public int getId() {
@@ -35,6 +37,12 @@ public class Player {
 	public void setPlayerTag(String newTag) {
 		this.playerTag = newTag;
 	}
+	
+	public void addPlayerPoints(int p){
+		this.points += p;
+	}
+	
+	
 	
 	/**
 	 * A function which calculates new rank score based on the match that is entered.

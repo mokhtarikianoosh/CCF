@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en-US">
         <head>
@@ -30,7 +32,8 @@
                 <h3>Add a player:</h3>
                 <br>
                 <form id = "addPlayer">
-                    Player Tag: <input type = "text" id = "newPlayerTag" title = "Tag Required" placeholder="tag" required>
+                    Player Tag: <input type = "text" id = "PlayerTag" name = "PlayerTag">
+                    Points to add: <input type = "text" id = "points" name = "points">
                     <input type = "submit" value = "Add">
                 </form>
             </div>

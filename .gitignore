@@ -25,3 +25,6 @@ CCF/.classpath
 CCF/.classpath
 *.class
 CCF/build/classes/logicLayer/logicLayer.class
+*.class
+*.class
+CCF/build/classes/logicLayer/logicLayer.class

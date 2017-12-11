@@ -7,10 +7,10 @@ function loginFunction(){
     var wasCorrect = false;
     
     
-    if (document.getElementById('username').value === "schmubbles"){
-        if (document.getElementById('password').value === "bubbi"){
+    if (document.getElementById('username').value === "admin"){
+        if (document.getElementById('password').value === "kia"){
             wasCorrect = true;            
-            window.location.replace("./updateRankings.html");            
+            window.location.replace("./updateRankings.jsp");            
         }
     }
 

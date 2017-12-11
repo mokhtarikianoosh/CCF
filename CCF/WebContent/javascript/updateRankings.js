@@ -18,15 +18,25 @@ $(document).ready(function(){
         event.preventDefault();
 
         $.ajax({
-            url:"addPlayer",
+            url:"addPoints",
             type:"POST",
             dataType: "json",
             data: $("#addPlayer").serialize(),
             success: function(data){
+            	
+            	alert("Points Successfully added to " + $("#PlayerTag").val());
+            	
+            	$( "#addPlayer" ).each(function(){
+            	    this.reset();
+            	});
+            	
+            	if(!(data.isValid)){
+            		alert("Please enter a correct Player name");
+            	}
 
             }
         });
-        loadPlayers();
+      // loadPlayers();
         return false;
     });
 
@@ -40,6 +50,8 @@ $(document).ready(function(){
             dataType: "json",
             data: $("#removePlayer").serialize(),
             success: function(data){
+            	
+            	
 
             }
         });

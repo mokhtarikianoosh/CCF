@@ -1,6 +1,9 @@
 
 $(document).ready(function(){
 
+	
+	
+	
 	loadRegisteredPlayers();
 
 	$('#updateUserName').submit(function(event){
