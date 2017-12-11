@@ -10,7 +10,7 @@
             <link rel="stylesheet" href="css/body.css">
             <link rel="stylesheet" href="css/footer.css">
             <link rel="stylesheet" href="css/admin.css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>      
+            <script src=""></script>      
             <script src = "./javascript/dragger.js"></script>
             <script src = "./javascript/updateRankings.js"></script>
             
@@ -19,9 +19,8 @@
         <body>
             <div class = "menu">
                 <ul>
-                    <li class = "rankings"><a href = "updateRankings.html">Update Rankings</a></li>
-                    <li class = "tournaments"><a href = "updateTournaments.html">Update Tournaments</a></li>
-                    <li class = "tournaments"><a href = "updateSignUp.html">Update Sign-up</a></li>                    
+                    <li class = "rankings"><a href = "updateRankings.jsp">Add points</a></li>
+                    <li class = "tournaments"><a href = "updateTournaments.jsp">Create Tournament</a></li>              
                     <li class = "login"><a href = "index.jsp">Logout</a></li>                      
                 </ul>
             </div>

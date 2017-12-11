@@ -1,7 +1,12 @@
 $(document).ready(function(){
+	
+	
+
+
     
-    $("#addTournament").submit(function(event){
-        event.preventDefault();
+    $("#createT").submit(function(event){
+       
+    	console.log("click worked");
 
         
         $.ajax({

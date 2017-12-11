@@ -42,3 +42,5 @@ CCF/.classpath
 *.class
 *.class
 CCF/build/classes/logicLayer/logicLayer.class
+*.class
+CCF/build/classes/persistLayer/PlayerPersists.class

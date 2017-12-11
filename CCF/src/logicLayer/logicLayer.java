@@ -1,8 +1,10 @@
 package logicLayer;
 
 import java.sql.Connection;
+import java.util.Date;
 import java.util.List;
 import objectLayer.Player;
+import objectLayer.Tournament;
 import persistLayer.*;
 
 public class logicLayer {
@@ -66,6 +68,15 @@ public class logicLayer {
 		pp.addPoints(id, points);
 		
 		}
+		
+		
+		
+	}
+	
+	public void addTournament(int id ,String name,Date  .sq, String tyoe, int entryFee,  String firstPrize, String secondPrize , String thirdPrize){
+		
+		Tournament T = new Tournament (id, name , date ,tyoe, entryFee, firstPrize, secondPrize, thirdPrize);
+		
 		
 		
 		
