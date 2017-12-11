@@ -37,3 +37,8 @@ CCF/WebContent/javascript/rankings.js
 >>>>>>> Stashed changes
 >>>>>>> b352184801b13e8b30e49cf61b0e1f6f8523378e
 CCF/.classpath
+CCF/.classpath
+CCF/.classpath
+*.class
+*.class
+CCF/build/classes/logicLayer/logicLayer.class

@@ -24,16 +24,19 @@ $(document).ready(function(){
             data: $("#addPlayer").serialize(),
             success: function(data){
             	
+            	if(!(data.isValid)){
+            		alert("Please enter a correct Player name");
+            	}
+            	else{
+            	
             	alert("Points Successfully added to " + $("#PlayerTag").val());
             	
             	$( "#addPlayer" ).each(function(){
             	    this.reset();
             	});
             	
-            	if(!(data.isValid)){
-            		alert("Please enter a correct Player name");
-            	}
-
+            	
+            }
             }
         });
       // loadPlayers();
