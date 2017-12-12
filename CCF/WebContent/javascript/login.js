@@ -8,7 +8,7 @@ function loginFunction(){
     
     
     if (document.getElementById('username').value === "admin"){
-        if (document.getElementById('password').value === "kia"){
+        if (document.getElementById('password').value === "admin"){
             wasCorrect = true;            
             window.location.replace("./updateRankings.jsp");            
         }
