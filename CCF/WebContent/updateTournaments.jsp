@@ -28,12 +28,12 @@
 
         <body>
             <div class = "menu">
-                <ul>
-                    <li class = "rankings"><a href = "updateRankings.html">Update Rankings</a></li>
-                    <li class = "tournaments"><a href = "updateTournaments.html">Update Tournaments</a></li>
-                    <li class = "tournaments"><a href = "updateSignUp.html">Update Sign-up</a></li>                    
-                    <li class = "login"><a href = "index.jsp">Logout</a></li>                      
-                </ul>
+               <ul>
+         
+                <li class = "rankings"><a href = "updateRankings.jsp">Add Points</a></li>
+                <li class = "tournaments"><a href = "updateTournaments.jsp">CreateTournament</a></li>
+                <li class = "login"><a href = "index.jsp">Logout</a></li>                      
+            </ul>
             </div>
 
             <br>
@@ -89,7 +89,7 @@
        <option value="2v2">
         2v2
        </option>
-       <option value ="free">
+       <option value ="free for all">
        Free for All
        </option>
       </select>

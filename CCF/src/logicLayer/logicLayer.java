@@ -1,6 +1,7 @@
 package logicLayer;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 import objectLayer.Player;
@@ -85,6 +86,16 @@ public class logicLayer {
 		
 		
 	}
+	
+	
+	public List <Tournament> getAllTournament(){
+		
+	TournamentPersists TP = new TournamentPersists();
+	
+	return TP.getAllTournament();
+	
+	}
+	
 
 
 

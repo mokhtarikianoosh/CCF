@@ -50,3 +50,5 @@ CCF/build/classes/persistLayer/PlayerPersists.class
 *.class
 
 CCF/build/classes/logicLayer/logicLayer.class
+
+*.class

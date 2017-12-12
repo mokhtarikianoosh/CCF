@@ -16,9 +16,7 @@ $(document).ready(function(){
             data: $("#createT").serialize(),
             success: function(data){
             	
-            	if(!data.isValid){
-            		alert("Invalid User Tag entered");
-            	}
+            	$alert("Tournament Successfully Created!");
 
             }
         });

@@ -2,6 +2,7 @@ package persistLayer;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +31,48 @@ public class TournamentPersists {
 	public Tournament getTournament(int id) {
 		Tournament t = null;
 		return t;
+	}
+	
+	
+	public List <Tournament> getAllTournament() {
+		
+		List <Tournament> T  = new ArrayList <Tournament>();
+		String query = "SELECT * FROM Tournament";
+		Tournament tour;
+		
+		
+		ResultSet result = DatabaseAccess.retrieve(query);
+		
+		
+		
+		try {
+		
+			
+			while(result.next()) {
+				
+			String	name = result.getString("name");
+			String	date = result.getString("date");
+			String	entryFee = result.getString("entryFee");
+			String	type = result.getString("type");
+			String	fPrize = result.getString("fPrize");
+			String	sPrize = result.getString("sPrize");
+			String	tPrize = result.getString("tPrize");
+				
+				tour = new Tournament(0, name , date ,type , fPrize, sPrize, tPrize, entryFee);
+				
+				T.add(tour);
+				
+			}
+		
+		}catch(SQLException e){
+			
+			e.printStackTrace();
+			
+		}
+		
+		
+		return T;
+		
 	}
 	
 	

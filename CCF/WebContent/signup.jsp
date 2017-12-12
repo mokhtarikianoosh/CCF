@@ -21,9 +21,9 @@
              <ul>
                 <li class = "home"><a href = "index.jsp">Home</a></li>
                 <li class = "rankings"><a href = "rankings.jsp">Rankings</a></li>
-                <li class = "tournaments"><a href = "tournaments.html">Tournaments</a></li>
+                <li class = "tournaments"><a href = "tournaments.jsp">Tournaments</a></li>
                 <li class = "sign-up"><a href = "signup.jsp">Sign-up</a></li>
-                <li class = "login"><a href = "login.html">Login</a></li>
+                <li class = "login"><a href = "login.jsp">Login</a></li>
                     
             </ul>
         </div>
@@ -42,13 +42,7 @@
     
         <br><br>
                        
-        <div id = "PlayerSignUpList" class = "playerSignUp">
-            <h3>Players Signed up</h3> 
-            <ol>
-                <li>Player 1</li>
-                <li>Player 2</li>
-            </ol>
-        </div>
+        
 
     
     <br>

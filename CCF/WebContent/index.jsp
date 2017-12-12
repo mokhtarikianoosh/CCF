@@ -17,7 +17,7 @@
             <ul>
                 <li class = "home"><a href = "index.jsp">Home</a></li>
                 <li class = "rankings"><a href = "rankings.jsp">Rankings</a></li>
-                <li class = "tournaments"><a href = "tournaments.html">Tournaments</a></li>
+                <li class = "tournaments"><a href = "tournaments.jsp">Tournaments</a></li>
                 <li class = "sign-up"><a href = "signup.jsp">Sign-up</a></li>
                 <li class = "login"><a href = "login.html">Login</a></li>
                     
