@@ -93,6 +93,9 @@ public class PlayerPersists {
 						result.getDouble("RankValue"),
 						result.getString("PlayerTag") 
 						);
+				
+				Player.addPlayerPoints(Integer.parseInt((result.getString("Points"))));
+				
 				ret.add(Player);
 			}
 		} catch (SQLException e) {

@@ -16,7 +16,10 @@ $(document).ready(function(){
             data: $("#createT").serialize(),
             success: function(data){
             	
-            	$alert("Tournament Successfully Created!");
+            	alert("Tournament Successfully Created!");
+            	$( "#createT" ).each(function(){
+            	    this.reset();
+            	});
 
             }
         });

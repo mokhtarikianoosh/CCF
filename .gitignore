@@ -52,3 +52,7 @@ CCF/build/classes/persistLayer/PlayerPersists.class
 CCF/build/classes/logicLayer/logicLayer.class
 
 *.class
+CCF/.classpath
+CCF/.classpath
+CCF/.classpath
+CCF/build/classes/objectLayer/Tournament.class

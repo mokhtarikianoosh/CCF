@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+	console.log("WE ARE HERE");
 	
 	$.ajax({
 		
@@ -9,22 +10,27 @@ $(document).ready(function() {
 		success: function(Player){
 			
 			
+			console.log("WE ARE HERE");
 			var html = "";
+			
+			console.log(Player);
 		
 		
 			$.each(Player.player, function(index, p){
 				
-				if(p.rankValue != -1){
+				var rank = index + 1;
+				
+				
 				
 				 html +=  '<tr>' +
-	                '<td>' + p.rankValue + '</td>    '   +              
-	                '<td>' + p.playerTag + '</td>' + 
-	               
+	                '<td><strong> ' + rank + '<strong></td>    '   +              
+	                '<td>  ' + p.playerTag + '</td>' + 
+	                '<td> ' + p.points + '</td>' + 
 	           '</tr>';
 				 
 				 console.log(html);
 				
-				}
+				
 			});
 		
 			

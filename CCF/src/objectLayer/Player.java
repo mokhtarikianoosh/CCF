@@ -42,6 +42,10 @@ public class Player {
 		this.points += p;
 	}
 	
+	public int getPoints(){
+		return points;
+	}
+	
 	
 	
 	/**

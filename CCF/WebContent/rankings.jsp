@@ -3,12 +3,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+    	<br>
         <title>Rankings</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">    
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/body.css">
         <link rel="stylesheet" href="css/footer.css">
+        <script src="javascript/jquery-3.1.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src = "./javascript/rankings.js"></script>
     </head>
@@ -27,12 +29,14 @@
 
 
         <div class = "ranks" >
+        <img src = "./images/pod.png" alt = "pod" align = "middle" style="width: 20%; height: 20%">
             <h1>Athens Georgia Melee Power Rankings</h1>
             <table id = "playerTable" align="center">
                 <tbody id = "playerContainer">
                     <tr>
                         <th>Rank</th>
-                        <th>Tag</th>
+                        <th>Name</th>
+                        <th>Points</th>
                     </tr>
                    
                 </tbody>

@@ -29,8 +29,8 @@
         </div>
 
         <br>
-        <div class = "signingUp">
-        	<h3>Sign up for the next Classic Citssy Fisticuffs!</h3>
+        <div class = "signingUp" align = "center">
+        	<h2>Sign up for the next Classic City Fisticuffs!</h2><br><br><br><br>
         	<form id="updateUserName">
         		<label for ="username"> Username:</label>
         		<input type = "text" id= "username" name = "username">

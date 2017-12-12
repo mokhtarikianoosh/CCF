@@ -16,7 +16,7 @@
 <style type="text/css">
 .mycss
 {
-font-weight:normal;;letter-spacing:0pt;word-spacing:2pt;font-size:12px;text-align:left;font-family:arial black, sans-serif;line-height:1;
+font-weight:normal;;letter-spacing:0pt;word-spacing:2pt;font-size:12px;text-align:center;font-family:arial black, sans-serif;line-height:1;
 }
 </style>
 

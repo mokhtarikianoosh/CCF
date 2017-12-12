@@ -55,6 +55,10 @@ $.ajax({
 				$("#displayName").fadeIn(500);	
 				
 				$("#displayName").fadeOut(3000);
+				
+				$( "#updateUserName" ).each(function(){
+            	    this.reset();
+            	});
 			}
 			
 			

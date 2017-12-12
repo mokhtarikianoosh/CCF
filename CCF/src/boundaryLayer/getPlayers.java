@@ -60,7 +60,9 @@ public class getPlayers extends HttpServlet {
 		Collections.sort(playerlist, new Comparator<Player>(){
 			@Override
 			public int compare(Player p1, Player p2) {
-				  return Double.compare(p1.getRankValue(), p2.getRankValue());
+				  Integer v1 = new Integer(p1.getPoints());
+				  Integer v2 = new Integer(p2.getPoints());
+				  return v2.compareTo(v1);
 			}
 		});
 		

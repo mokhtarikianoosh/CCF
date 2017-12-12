@@ -9,8 +9,8 @@
             <link rel="stylesheet" href="css/header.css">
             <link rel="stylesheet" href="css/body.css">
             <link rel="stylesheet" href="css/footer.css">
-            <link rel="stylesheet" href="css/admin.css">
-            <script src=""></script>      
+           
+           <script src="javascript/jquery-3.1.1.min.js"></script>
             <script src = "./javascript/dragger.js"></script>
             <script src = "./javascript/updateRankings.js"></script>
             
@@ -27,43 +27,25 @@
             
             <br><br>
             
-            <div class = "addPlayer">
-                <h3>Add a player:</h3>
+            <div class = "addPlayer" align = "middle">
+                <h3>Add Points</h3>
+                <br>
+                <br>
+                <br>
                 <br>
                 <form id = "addPlayer">
-                    Player Tag: <input type = "text" id = "PlayerTag" name = "PlayerTag">
-                    Points to add: <input type = "text" id = "points" name = "points">
+                    Player Tag: <input type = "text" id = "PlayerTag" name = "PlayerTag" size = "20">
+                    <br>
+                    Points:     <input type = "text" id = "points" name = "points" size = "10">
                     <input type = "submit" value = "Add">
                 </form>
             </div>
 
             <br><br>
             
-            <div class = "removePlayer">
-                <h3>Remove a player:</h3>
-                <br>
-                <form id = "removePlayer">
-                    Player Tag: <input type = "text" id = "removePlayerTag" title = "Tag Required" placeholder="tag" required>
-                    <input type = "submit" value = "Remove">
-                </form>
-            </div>
-
-            <br><br>
             
-            <div class = "players">
-                <h3>Update Player Rankings!</h3>
-                <ol>
-                    <div id = "playerContainer">
-                        <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)">Player 1</li>
-                        <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)">Player 2</li>
-                        <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)">Player 3</li>
-                        <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)">Player 4</li>
-                        <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)">Player 5</li>
-                        <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)">Player 6</li>
-                    </div>
-                </ol>
-                <button type = "text" onclick = "saveListOrder()">Save List!</button>
-            </div>
+
+           
             <div id = "test"></div>
         </body>
 </html>
